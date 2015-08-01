@@ -17,10 +17,7 @@
 
     <link href="dist/css/skins/skin-blue.min.css" rel="stylesheet" type="text/css"/>
     <!-- data load for existing travel agents-->
-    <script type="text/javascript">
-
-
-    </script>
+    <script type="text/javascript" src="plugins/knockoutjs/knockout-3.3.0.js"> </script>
 
 </head>
 
@@ -276,153 +273,13 @@
             <div class="row" style="margin-top: 22px">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <!-- Custom Tabs -->
-                    <div class="nav-tabs-custom">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab_1" data-toggle="tab">Create New</a></li>
-                            <li><a href="#tab_2" data-toggle="tab">Update Existing</a></li>
-
-                        </ul>
-                        <div class="tab-content">
-
-                            <div class="tab-pane active" id="tab_1">
-
-                                <!-- general form elements -->
-
-                                <div class="box box-info">
-                                    <div class="box-header">
-                                        <h3 class="box-title">Create New Travel Agents</h3>
-                                    </div><!-- /.box-header -->
-                                    <div class="row">
-                                        <!-- crete new agent form start -->
-                                        <form role="form">
-                                           <div class="col-md-8">
-                                               <div class="box-body">
-                                                    <div class="row form-group" style="margin-top: 20px;">
-                                                        <label class="col-md-4" for="travelAgentName">Travel Agent Name:</label>
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control" id="travelAgentName"
-                                                                   placeholder="Enter Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4" for="travelAgentAddress">Address:</label>
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"  id="travelAgentAddress" placeholder="Enter Address">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4"  for="travelAgentPhoneNo">Phone No:</label>
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control" id="travelAgentPhoneNo" placeholder="Enter Phone Number">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4" for="travelAgentEmail">Email:</label>
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"  id="travelAgentEmail"  placeholder="Enter Email">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4">Bank Name:</label>
-
-                                                        <div class="col-md-8">
-                                                            <select class="form-control">
-                                                                <option>Select Bank</option>
-                                                                <option>People's Bank</option>
-                                                                <option>Bank of Ceylon</option>
-                                                                <option>Seylan Bank</option>
-                                                                <option>Commercial Bank</option>
-                                                                <option>Sampath Bank</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4" for="travelAgentAccountNo">Account No:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"  id="travelAgentAccountNo" placeholder="Enter Account Number">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4" for="travelAgentAccountName">Account Name:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control" id="travelAgentAccountName" placeholder="Enter Account Name">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4" for="travelAgentAccountBranch">Branch
-                                                            Name:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="travelAgentAccountBranch"
-                                                                   placeholder="Enter Branch Name">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4" for="travelAgentRates">Rates:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="travelAgentRates" placeholder="Enter Rates">
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.box-body -->
-                                                <div class="box-footer">
-                                                    <div class="col-md-8"></div>
-                                                    <div class="col-md-2">
-                                                        <button type="submit" class="btn btn-primary">Create</button>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <button type="submit" class="btn btn-danger">Cancel</button>
-                                                    </div>
-
-
-                                                </div>
-                                           </div>
-                                            <!--end of left column-->
-
-
-                                        <div class="col-md-4">
-
-                                                <div class="box-body">
-                                                    <div class="row form-group" style="margin-top: 20px;">
-                                                        <img id="agentImage" src="dist/img/avatar5.png" class="img-rounded img-responsive"style="width:140px;height:140px;">
-                                                        <input id="agentLogo" name="agentLogo" type="file" onchange="show_pic(this)" style="margin-top: 18px;">
-
-                                                        <div class="col-lg-4">
-                                                            <br>
-                                                            <button type="submit" class="btn btn-block btn-info btn-sm">Upload</button>
-                                                            </li>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        <!--end of right colum-->
-                                        </form>
-                                        <!--end of crete new agent form-->
-                                    </div>
-                                    <!-- end of row -->
-                                </div>
-                                <!-- /.box -->
-
-                            </div>
-                            <!-- /.tab-pane -->
-                            <div class="tab-pane" id="tab_2">
-                              <div class="row">
+                    <div class="row">
                                 <div class="col-xs-12">
                                     <div class="box box-info">
                                         <div class="box-header">
-                                            <h3 class="box-title">Existing Travel Agents</h3>
+                                            <div class="col-md-10"><h3 class="box-title">Existing Travel Agents</h3></div>
+                                            <div class="col-md-2"><a title="Add New Travel Agents" href="travelagent.html" class="btn btn-info"><i class='fa fa-user-plus'></i> Add New Agent</a></div>
+
                                         </div><!-- /.box-header -->
                                         <div class="box-body">
                                             <table id="travelAgentDetails" class="table table-bordered table-striped">
@@ -433,46 +290,93 @@
                                                     <th>Phone No</th>
                                                     <th>Email</th>
                                                     <th>Rates</th>
+                                                    <th></th>
 
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+                                                <tr>
+                                                    <th>Lakshan</th>
+                                                    <th>Matara</th>
+                                                    <th>071</th>
+                                                    <th>lakshan@gmail.com</th>
+                                                    <th>20</th>
+                                                    <th><a data-toggle="modal" data-target="#agentDetails">View</a></th>
 
+                                                </tr>
                                                 </tbody>
 
                                             </table>
                                         </div><!-- /.box-body -->
                                     </div><!-- /.box -->
 
-
-
-
-
                                 </div>
                                  <!--end of column-->
                              </div>
                              <!--end of row-->
+                </div>
+               <!-- /.col -->
+             </div>
+            <!-- /.row -->
+            <!-- Modal -->
+            <div class="modal fade" id="agentDetails" role="dialog">
+                <div class="modal-dialog" style="height: auto">
+                    <div class="box box-info">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Travel Agent Details</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                            <div class="col-md-8">
+                              <table class="table">
+                                  <tr>
+                                      <td>Name:</td>
+                                      <td>Lakshan Dilina Vithana</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Address:</td>
+                                      <td>Matara</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name:</td>
+                                      <td>Lakshan Dilina Vithana</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name:</td>
+                                      <td>Lakshan Dilina Vithana</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name:</td>
+                                      <td>Lakshan Dilina Vithana</td>
+                                  </tr>
+
+
+                              </table>
+                            </div>
+
+                            <div class="col-md-4">
+                                <img id="agentImage" src="dist/img/avatar5.png" class="img-rounded img-responsive"style="width:140px;height:140px;">
+                            </div>
+
 
                             </div>
-                            <!-- /.tab-pane -->
-
                         </div>
-                        <!-- /.tab-pane -->
-
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
-                    <!-- /.tab-content -->
                 </div>
-                <!-- nav-tabs-custom -->
+                </div>
             </div>
-            <!-- /.col -->
-
-
-            <!-- /.row -->
-            <!-- END CUSTOM TABS -->
 
 
         </section>
         <!-- /.content -->
+
+
     </div>
     <!-- /.content-wrapper -->
 
