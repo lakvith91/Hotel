@@ -14,25 +14,12 @@
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
     <!-- Theme style -->
     <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css"/>
-    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-          page. However, you can choose any other skin. Make sure you
-          apply the skin class to the body tag so the changes take effect.
-    -->
+
     <link href="dist/css/skins/skin-blue.min.css" rel="stylesheet" type="text/css"/>
+    <!-- data load for existing travel agents-->
     <script type="text/javascript">
-        function show_pic(input) {
 
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
 
-                reader.onload = function (e) {
-                    $('#agentImage').attr('src', e.target.result);
-                }
-
-                reader.readAsDataURL(input.files[0]);
-            }
-
-        }
     </script>
 
 </head>
@@ -303,54 +290,38 @@
                                 <!-- general form elements -->
 
                                 <div class="box box-info">
+                                    <div class="box-header">
+                                        <h3 class="box-title">Create New Travel Agents</h3>
+                                    </div><!-- /.box-header -->
                                     <div class="row">
                                         <!-- crete new agent form start -->
                                         <form role="form">
                                            <div class="col-md-8">
-
-                                                <div class="box-body">
+                                               <div class="box-body">
                                                     <div class="row form-group" style="margin-top: 20px;">
-                                                        <label class="col-md-4" for="travelAgentName">Travel Agent
-                                                            Name:</label>
-
+                                                        <label class="col-md-4" for="travelAgentName">Travel Agent Name:</label>
                                                         <div class="col-md-8">
                                                             <input type="text" class="form-control" id="travelAgentName"
                                                                    placeholder="Enter Name">
                                                         </div>
-
                                                     </div>
                                                     <div class="row form-group">
-                                                        <label class="col-md-4"
-                                                               for="travelAgentAddress">Address:</label>
-
+                                                        <label class="col-md-4" for="travelAgentAddress">Address:</label>
                                                         <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="travelAgentAddress"
-                                                                   placeholder="Enter Address">
+                                                            <input type="text" class="form-control"  id="travelAgentAddress" placeholder="Enter Address">
                                                         </div>
-
                                                     </div>
                                                     <div class="row form-group">
-                                                        <label class="col-md-4"
-                                                               for="travelAgentPhoneNo">Phone No:</label>
-
+                                                        <label class="col-md-4"  for="travelAgentPhoneNo">Phone No:</label>
                                                         <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="travelAgentPhoneNo"
-                                                                   placeholder="Enter Phone Number">
+                                                            <input type="text" class="form-control" id="travelAgentPhoneNo" placeholder="Enter Phone Number">
                                                         </div>
-
                                                     </div>
                                                     <div class="row form-group">
-                                                        <label class="col-md-4"
-                                                               for="travelAgentEmail">Email:</label>
-
+                                                        <label class="col-md-4" for="travelAgentEmail">Email:</label>
                                                         <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="travelAgentEmail"
-                                                                   placeholder="Enter Email">
+                                                            <input type="text" class="form-control"  id="travelAgentEmail"  placeholder="Enter Email">
                                                         </div>
-
                                                     </div>
                                                     <div class="row form-group">
                                                         <label class="col-md-4">Bank Name:</label>
@@ -367,24 +338,18 @@
                                                         </div>
                                                     </div>
                                                     <div class="row form-group">
-                                                        <label class="col-md-4" for="travelAgentAccountNo">Account
-                                                            No:</label>
+                                                        <label class="col-md-4" for="travelAgentAccountNo">Account No:</label>
 
                                                         <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="travelAgentAccountNo"
-                                                                   placeholder="Enter Account Number">
+                                                            <input type="text" class="form-control"  id="travelAgentAccountNo" placeholder="Enter Account Number">
                                                         </div>
 
                                                     </div>
                                                     <div class="row form-group">
-                                                        <label class="col-md-4" for="travelAgentAccountName">Account
-                                                            Name:</label>
+                                                        <label class="col-md-4" for="travelAgentAccountName">Account Name:</label>
 
                                                         <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="travelAgentAccountName"
-                                                                   placeholder="Enter Account Name">
+                                                            <input type="text" class="form-control" id="travelAgentAccountName" placeholder="Enter Account Name">
                                                         </div>
 
                                                     </div>
@@ -428,26 +393,20 @@
                                         <div class="col-md-4">
 
                                                 <div class="box-body">
-                                                    <div class="row form-group" style="margin-top: 50px;">
-                                                        <img id="agentImage" class="img-circle img-responsive"
-                                                             style="width:140px;height:140px;">
-                                                        <input id="agentLogo" name="agentLogo" type="file"
-                                                               onchange="show_pic(this)" style="margin-top: 18px;">
+                                                    <div class="row form-group" style="margin-top: 20px;">
+                                                        <img id="agentImage" src="dist/img/avatar5.png" class="img-rounded img-responsive"style="width:140px;height:140px;">
+                                                        <input id="agentLogo" name="agentLogo" type="file" onchange="show_pic(this)" style="margin-top: 18px;">
 
-                                                        <div class="col-lg-5">
+                                                        <div class="col-lg-4">
                                                             <br>
-                                                            <button type="submit" class="btn btn-block btn-info btn-sm">
-                                                                <i class="fa-upload"></i>Upload
-                                                            </button>
+                                                            <button type="submit" class="btn btn-block btn-info btn-sm">Upload</button>
                                                             </li>
                                                         </div>
 
 
                                                     </div>
                                                 </div>
-
-
-                                         </div>
+                                        </div>
                                         <!--end of right colum-->
                                         </form>
                                         <!--end of crete new agent form-->
@@ -459,146 +418,40 @@
                             </div>
                             <!-- /.tab-pane -->
                             <div class="tab-pane" id="tab_2">
-                                <!-- agent search form -->
-                                <div class="box box-info">
-                                    <div class="row" style="margin-top: 15px;">
-                                        <div class="col-md-1"></div>
-                                        <div class="col-md-3">
-                                            <label>Enter Travel Agent Name:</label>
-                                        </div>
-                                        <div class="col-md-5 input-group input-group-sm">
-                                            <input type="text" class="form-control">
-                                              <span class="input-group-btn">
-                                                 <button class="btn btn-info btn-flat" type="button">Search!</button>
-                                              </span>
-                                        </div>
-                                    </div>
+                              <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="box box-info">
+                                        <div class="box-header">
+                                            <h3 class="box-title">Existing Travel Agents</h3>
+                                        </div><!-- /.box-header -->
+                                        <div class="box-body">
+                                            <table id="travelAgentDetails" class="table table-bordered table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>Agent Name</th>
+                                                    <th>Address</th>
+                                                    <th>Phone No</th>
+                                                    <th>Email</th>
+                                                    <th>Rates</th>
+
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                </tbody>
+
+                                            </table>
+                                        </div><!-- /.box-body -->
+                                    </div><!-- /.box -->
+
+
+
+
 
                                 </div>
-                                <div class="box box-info">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <!-- update existing agent form start -->
-                                            <form role="form">
-                                                <div class="box-body">
-                                                    <div class="row form-group" style="margin-top: 20px;">
-                                                        <label class="col-md-4" for="editTravelAgentName">Travel Agent
-                                                            Name:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="editTravelAgentName" placeholder="Enter Name">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4"
-                                                               for="editTravelAgentAddress">Address:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="editTravelAgentAddress"
-                                                                   placeholder="Enter Address">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4"
-                                                               for="editTravelAgentPhoneNo">Phone No:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="editTravelAgentPhoneNo"
-                                                                   placeholder="Enter Phone Number">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4"
-                                                               for="editTravelAgentEmail">Email:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="editTravelAgentEmail" placeholder="Enter Email">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4">Bank Name:</label>
-
-                                                        <div class="col-md-8">
-                                                            <select class="form-control" id="editTravelAgentBankName">
-                                                                <option>Select Bank</option>
-                                                                <option>People's Bank</option>
-                                                                <option>Bank of Ceylon</option>
-                                                                <option>Seylan Bank</option>
-                                                                <option>Commercial Bank</option>
-                                                                <option>Sampath Bank</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4" for="editTravelAgentAccountNo">Account
-                                                            No:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="editTravelAgentAccountNo"
-                                                                   placeholder="Enter Account Number">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4" for="editTravelAgentAccountName">Account
-                                                            Name:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="editTravelAgentAccountName"
-                                                                   placeholder="Enter Account Name">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4" for="editTravelAgentAccountBranch">Branch
-                                                            Name:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="editTravelAgentAccountBranch"
-                                                                   placeholder="Enter Branch Name">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label class="col-md-4"
-                                                               for="editTravelAgentRates">Rates:</label>
-
-                                                        <div class="col-md-8">
-                                                            <input type="text" class="form-control"
-                                                                   id="editTravelAgentRates" placeholder="Enter Rates">
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.box-body -->
-                                                <div class="box-footer">
-                                                    <div class="col-md-8"></div>
-                                                    <div class="col-md-2">
-                                                        <button type="submit" class="btn btn-success">Update</button>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <button type="submit" class="btn btn-danger">Delete</button>
-                                                    </div>
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <!--end of left column-->
-                                    </div>
-                                </div>
-                                <!-- /.box -->
-
+                                 <!--end of column-->
+                             </div>
+                             <!--end of row-->
 
                             </div>
                             <!-- /.tab-pane -->
@@ -718,10 +571,35 @@
 <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //function for preview image before upload
+    function show_pic(input) {
 
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-      Both of these plugins are recommended to enhance the
-      user experience. Slimscroll is required when using the
-      fixed layout. -->
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#agentImage').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<!-- KnockoutJs -->
+<script type="text/javascript" src="plugins/knockoutjs/knockout-3.3.0.js">
+
+</script>
+<!-- DATA TABES SCRIPT -->
+<script src="plugins/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="plugins/datatables/dataTables.bootstrap.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+            $(function () {
+               $("#travelAgentDetails").dataTable();});
+
+</script>
+
+
+
+
 </body>
 </html>
