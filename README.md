@@ -1,4 +1,4 @@
-# Hotel
+# Hotel Management System
 Hotel management system 
 
 Used Technologies:
